@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // import styles from "./mycss.module.css";
-import myImage from "./pictures/image.png";
 import image from "./pictures/logo.png";
 import pwLogo from "./pictures/pwlogo.png";
+import dashicon from './pictures/dashicon.png'
 import "../App.css";
 const Loginpage = () => {
   const [formData, setFormData] = useState({
@@ -27,17 +27,17 @@ const Loginpage = () => {
         backgroundColor: "#e7e3e2",
         display: "flex",
         justifyContent: "center",
-        height: "70vh",
+        height: "460px",
         width: "355px",
         position: "absolute",
         top: "15%",
         left: "35%",
         borderRadius: "10px",
       }}>
-      <form onSubmit={done}>
+      <form onSubmit={done} >
         <div>
           <img
-            src={myImage}
+            src={dashicon}
             alt="pic"
             style={{
               height: "60px",
@@ -60,7 +60,7 @@ const Loginpage = () => {
             style={{
               position: "absolute",
               left: "39px",
-              top: "41.5%",
+              top: "39.9%",
               transform: "translately(-50%)",
               height: "12px",
               width: "16px",
@@ -90,7 +90,7 @@ const Loginpage = () => {
             style={{
               position: "absolute",
               left: "39px",
-              top: "50.5%",
+              top: "48.5%",
               transform: "translately(-50%)",
               height: "13px",
               width: "14px",
@@ -112,7 +112,10 @@ const Loginpage = () => {
             }}
           />
         </div>
-        <div style={{textAlign:'end', fontSize:'12px'}}>Forgot password?</div><br />
+        <div style={{ textAlign: "end", fontSize: "12px" }}>
+          Forgot password?
+        </div>
+        <br />
         <button
           type="submit"
           style={{
@@ -128,18 +131,17 @@ const Loginpage = () => {
         </button>
 
         <h3 style={{ textAlign: "center", height: "20px" }}>or</h3>
-        <button
-          type="submit"
+        <div
           style={{
             textAlign: "center",
-            backgroundColor: "##eff5f6",
+            backgroundColor: "whitesmoke",
             borderRadius: "5px",
             width: "300px",
             height: "20px",
             border: "2px",
           }}>
           Login with Email Link
-        </button>
+        </div>
       </form>
     </div>
   );
